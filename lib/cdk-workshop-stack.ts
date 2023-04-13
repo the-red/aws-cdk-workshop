@@ -9,7 +9,7 @@ export class CdkWorkshopStack extends Stack {
     super(scope, id, props);
 
     const queue = new sqs.Queue(this, 'CdkWorkshopQueue', {
-      visibilityTimeout: Duration.seconds(300)
+      visibilityTimeout: Duration.seconds(300),
     });
 
     const topic = new sns.Topic(this, 'CdkWorkshopTopic');
