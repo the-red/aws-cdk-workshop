@@ -12,6 +12,7 @@ test('Test', () => {
 
   template.hasResourceProperties('AWS::Lambda::Function', {
     Handler: 'index.handler',
-    Runtime: 'nodejs16.x',
+    Runtime: 'nodejs18.x',
+    Architectures: ['arm64'],
   });
 });
